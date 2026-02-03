@@ -78,7 +78,7 @@ https://www.figma.com/design/iVUF7WUiLPclkmcQG1NZ4X/Portfolio---Sara-Valdivieso?
 El proyecto está publicado y accesible desde **GitHub Pages**.
 
 ➡️ Web desplegada:  
-saravg95-Portfolio.github.io
+https://saravg95.github.io/PortfolioSara/
 
 ---
 
