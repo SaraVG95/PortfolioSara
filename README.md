@@ -42,7 +42,7 @@ El objetivo de este proyecto es presentar mi perfil académico y técnico, mostr
 Aplicación desarrollada en React para la gestión de mesas y pedidos en un restaurante.  
 Permite calcular el total del pedido con y sin propina y gestionar el cierre de mesas.
 
-➡️ Proyecto académico – https://github.com/SaraVG95/JavaScript/tree/7e3eb36645bdd1bf6b360a454c067825d194f0a6/react/calculadora-propinas
+➡️ Proyecto académico – https://github.com/SaraVG95/JavaScript/tree/15860414bcbbe5026c28bc54f2ef70dade50bc72/react/calculadora-propinas
 
 ---
 
