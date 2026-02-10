@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
+	<!-- Configuración básica del documento , importante el viewport para que se adapte a móvil-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
+
+  	<!-- Hoja de estilos generada con Tailwind -->
 	<link rel="stylesheet" href="./assets/output.css">
 </head>
 
 <body class="bg-slate-50 text-slate-800">
 
+	<!-- ===================== HEADER / HERO ===================== -->
 	<header class="relative overflow-hidden min-h-screen pt-20 md:pt-16">
 
+		<!-- Botón flotante para activar/desactivar la música -->
 		<button id="toggle-music" class="fixed bottom-6 right-6 bg-white shadow-lg rounded-full p-3 hover:scale-105 transition z-50 cursor-pointer">
   			<svg class="w-6 h-6">
+				<!-- Icono de sonido (se cambia dinámicamente con JS) -->
     			<use id="icono-sonido" href="./assets/sprites.svg#sonido-off"></use>
   			</svg>
 		</button>
 
-		<nav class="w-full px-6 py-4 flex justify-between items-center fixed top-0 bg-slate-50 z-50">	
+		<!-- ===================== NAV ===================== -->
+		<nav class="w-full px-6 py-4 flex justify-between items-center fixed top-0 bg-slate-50 z-50">
+			<!-- Logo y nombre -->	
 			<a href="#" class="flex items-center gap-1">
 				<div class="w-14 h-14 md:w-20 md:h-20 shrink-0">
 					<img src="./assets/img/Logo.png" alt="Logo Sara Valdivieso" class="w-full h-full object-contain drop-shadow-sm"/>
@@ -27,21 +35,21 @@
 					Sara Valdivieso Godoy
 				</span>
 			</a>
-
+			<!-- Menú de navegación para desktop -->
 			<ul class="hidden md:flex gap-8 text-slate-700">
 				<li><a href="#sobre-mi" class="menu-pc">Sobre mí</a></li>
 				<li><a href="#tecnologias" class="menu-pc">Tecnologías</a></li>
 				<li><a href="#proyectos" class="menu-pc">Proyectos</a></li>
 				<li><a href="#contacto" class="menu-pc">Contacto</a></li>
 			</ul>
-
+			<!-- Menú desplegable para móvil -->
 			<details class="md:hidden relative">
 				<summary class="list-none cursor-pointer text-3xl select-none" aria-label="Abrir menú">
 					<svg class="w-12 h-12">
 						<use xlink:href="./assets/sprites.svg#hamburguesa"/>
 					</svg>
 				</summary>
-
+				<!-- Opciones del menú móvil -->
 				<ul class="absolute right-0 mt-4 bg-white shadow-lg rounded-xl w-40 p-4 flex flex-col gap-3 text-slate-700">
 					<li><a href="#sobre-mi" class="menu-movil">Sobre mí</a></li>
 					<li><a href="#tecnologias" class="menu-movil">Tecnologías</a></li>
@@ -50,17 +58,18 @@
 				</ul>
 			</details>
 		</nav>
-
+		<!-- Elementos decorativos circulares del fondo -->
 		<div class="absolute inset-0 pointer-events-none z-0">
 			<div class="absolute -top-32 -left-32 w-[800px] h-[800px] border border-orange-300/30 rounded-full"></div>
 			<div class="absolute top-1/3 -right-40 w-[600px] h-[600px] border border-orange-300/30 rounded-full"></div>
 			<div class="absolute bottom-[-200px] left-1/4 w-[400px] h-[400px] border border-orange-200/40 rounded-full"></div>
 		</div>
 
+		<!-- ===================== SECCIÓN HERO ===================== -->
 		<section class="relative min-h-[calc(100vh-4rem)] flex items-center justify-center px-6 py-10 md:py-0">
 
 			<div class="max-w-5xl grid md:grid-cols-2 gap-10 items-center">
-			
+				<!-- Texto principal -->
 				<div>
 					<h1 class="text-4xl md:text-5xl font-bold mb-4">
 						Hola, soy
@@ -69,12 +78,13 @@
 					<p class="text-lg text-slate-600 leading-relaxed mb-6">
 						Estudiante de DAW creando interfaces web modernas, funcionales y accesibles.
 					</p>
+					<!-- Botones de llamada a la acción -->
 					<div class="flex gap-4">
 						<a href="#proyectos" class="boton"> Ver proyectos </a>
 						<a href="#contacto" class="boton"> Contacto </a>
 					</div>
 				</div>
-
+				<!-- Imagen de portada -->
 				<div class="flex justify-center">
 					<img src="./assets/img/ImagenPortada.png" alt="Ilustración desarrolladora"
 						class="rounded-2xl shadow-lg transition-transform duration-300 hover:scale-[1.02]">
@@ -82,8 +92,9 @@
 			</div>
 		</section>
 	</header>
+	<!-- ===================== CONTENIDO PRINCIPAL ===================== -->
 	<main>
-
+	<!-- ===================== SOBRE MÍ ===================== -->
     <section id="sobre-mi" class="py-20 px-6 bg-white scroll-mt-24">
 		<div class="max-w-5xl mx-auto">	
 			<h2 class="text-3xl font-bold mb-8">Sobre <span class="text-indigo-600">mí</span></h2>
@@ -103,13 +114,13 @@
 			</p>
 		</div>
     </section>
-
+	<!-- ===================== TECNOLOGÍAS ===================== -->
     <section id="tecnologias" class="py-20 px-6 bg-slate-50 scroll-mt-24">
 		<div class="max-w-5xl mx-auto">
 			<h2 class="text-3xl font-bold mb-8">Tecnologías</h2>
 
 			<div class="linea"></div>
-
+			<!-- Frontend -->
 			<h3 class="text-xl font-semibold mb-6">Frontend</h3>
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
 
@@ -154,7 +165,7 @@
 					<p class="font-semibold">TypeScript</p>
 				</div>
 			</div>
-
+			<!-- Backend -->
 			<h3 class="text-xl font-semibold mb-6">Backend</h3>
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
 				<div class="tecnologias">
@@ -200,7 +211,7 @@
 					<p class="font-semibold">Python</p>
 				</div>
 			</div>
-
+			<!-- Infraestructura -->
 			<h3 class="text-xl font-semibold mb-6">Infraestructura</h3>
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 				<div class="tecnologias">
@@ -215,8 +226,9 @@
 			</div>
 		</div>
 	</section>
-
+	<!-- ===================== PROYECTOS ===================== -->
 	<section id="proyectos" class="py-20 px-6 bg-white scroll-mt-24">
+		<!-- Listado de proyectos académicos y técnicos -->
 		<div class="max-w-5xl mx-auto">
 			<h2 class="text-3xl font-bold mb-8">Proyectos</h2>
 
@@ -245,7 +257,7 @@
 						</div>
 
 						<div class="proyecto-enlaces">
-							<a href="https://github.com/SaraVG95/JavaScript/tree/e3e3bf38218ad9149472b5a1af7d8c27cec5781c/react/calculadora-propinas" target="_blank" rel="noopener noreferrer"
+							<a href="https://github.com/SaraVG95/JavaScript/tree/15860414bcbbe5026c28bc54f2ef70dade50bc72/react/calculadora-propinas" target="_blank" rel="noopener noreferrer"
 								class="enlaces"> GitHub </a>
 							<span class="text-sm text-slate-500 italic"> Proyecto académico </span>
 						</div>
@@ -309,12 +321,12 @@
   			</div>
 		</div>
 	</section>
-
+	<!-- ===================== CONTACTO ===================== -->
 	<section id="contacto" class="py-20 px-6 bg-slate-50 scroll-mt-24 text-center">
 		<h2 class="text-3xl font-bold mb-8">Contacto</h2>
 		
 		<p class="text-lg text-slate-600 mb-6">¿Hablamos? Puedes encontrarme aquí:</p>
-
+		<!-- Enlaces de contacto -->
 		<div class="flex justify-center gap-10">
 			<a href="mailto:saravg44@gmail.com" target="_blank" rel="noopener noreferrer" class="enlaces flex items-center gap-2">
 				<svg class="w-8 h-8">
@@ -339,12 +351,14 @@
 		</div>
 	</section>
   </main>
-
+  <!-- ===================== FOOTER ===================== -->
   <footer class="py-8 text-center text-sm text-slate-500 bg-white border-t border-slate-200">
  	© 2026 · Sara Valdivieso · Desarrolladora Web
   </footer>
 
+  	<!-- ===================== SCRIPT MENÚ MÓVIL ===================== -->
 	<script>
+	// Cierra el menú móvil al pulsar una opción	
 	document.querySelectorAll('details a').forEach(link => {
 		link.addEventListener('click', () => {
 		document.querySelector('details').removeAttribute('open')
@@ -352,17 +366,19 @@
 	})
 	</script>
 
+	<!-- Audio de fondo -->
 	<audio id="bg-music" loop>
   		<source src="./assets/audio/sonido-portfolio.mp3" type="audio/mpeg">
 	</audio>
 
+	<!-- ===================== SCRIPT CONTROL DE MÚSICA ===================== -->
 	<script>
 		const music = document.getElementById('bg-music');
 		const button = document.getElementById('toggle-music');
 		const icono = document.getElementById('icono-sonido');
-
+		// Estado de reproducción
 		let playing = false;
-
+		// Controla la reproducción de la música
 		button.addEventListener('click', () => {
 			if (!playing) {
 			music.volume = 0.2;
